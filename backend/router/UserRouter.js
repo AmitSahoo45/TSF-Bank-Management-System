@@ -11,6 +11,6 @@ const {
 router.post('/', CreateUser)
 router.get('/all', GetAllUsers)
 router.get('/:id', getSingleUser)
-router.post('/transfer/:id', TransferMoney)
+router.patch('/transfer/:id', TransferMoney)
 
 module.exports = router;

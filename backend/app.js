@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const cors = require('cors');
 const express = require('express');
 const app = express();
 
@@ -12,6 +12,8 @@ const notFound = require('./middleware/not-found')
 const connectDB = require('./database/connect')
 
 const UserRouter = require('./router/UserRouter')
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Welcome to Banking Management System')
